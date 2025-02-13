@@ -10,4 +10,16 @@
     <h1>
         Recipe Book
     </h1>
+    <ul>
+        <a href="{{ link }}">{{ name }}</a>
+    </ul>
+    <ol>
+        {% for ingredient in ingredients %}
+        <li>
+            {{ ingredient.name }} - {{ ingredient.quantity }}
+        </li>
+        {% endfor %}
+    </ol>
+    
+    
 {% endblock %}
