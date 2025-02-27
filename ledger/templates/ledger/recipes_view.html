@@ -14,7 +14,7 @@
     <ol>
         {% for ingredient in recipe.ingredients.all %}
         <li>
-            {{ ingredient.ingredient.name }} - {{ ingredient.quantity }}
+            {{ ingredient.ingredient_field.name }} - {{ ingredient.quantity }}
         </li>
         {% endfor %}
     </ol>
