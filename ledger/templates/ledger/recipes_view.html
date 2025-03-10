@@ -7,9 +7,12 @@
 {% endblock %}
 
 {% block content %}
-    <h1>
+    <h3>
         {{ recipe.name }}
-    </h1>
+    </h3>
+    <h3>
+        <em>Author - {{ recipe.author }}</em>
+    </h3>
     
     <ol>
         {% for ingredient in recipe.ingredients.all %}

@@ -7,9 +7,6 @@ Recipe List
 {% endblock %}
 
 {% block content %}
-    <h1>
-        Recipe Book
-    </h1>
     <ul>
         {% for recipe in object_list %}
         <li>
@@ -17,4 +14,5 @@ Recipe List
         </li>
         {% endfor %}
     </ul>
+        
 {% endblock %}
