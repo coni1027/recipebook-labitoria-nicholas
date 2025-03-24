@@ -43,9 +43,14 @@ class RecipeImageCreateView(LoginRequiredMixin, CreateView):
         return redirect('ledger:recipe_detail', pk=recipe.pk)
 
     def get_success_url(self):
-        return reverse_lazy('ledger:recipe_detail', kwargs={'pk': self.kwargs['pk']})
-    
+        return reverse_lazy(
+            'ledger:recipe_detail',
+            kwargs={'pk': self.kwargs['pk']}
+        )
+
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        context['recipe'] = get_object_or_404(models.Recipe, pk=self.kwargs['pk'])
+        context['recipe'] = get_object_or_404(
+            models.Recipe, pk=self.kwargs['pk']
+        )
         return context
